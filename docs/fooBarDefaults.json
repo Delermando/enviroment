@@ -1,0 +1,17 @@
+{
+    "swaggerVersion": "1.2",
+    "apiVersion": "1.0.0",
+    "resourcePath": "/fooBarDefaults",
+    "apis": [
+        {
+            "path": "/foo/bar/defaults",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "fooBarDefaults",
+                    "type": "FooBarDefaultsModel"
+                }
+            ]
+        }
+    ]
+}

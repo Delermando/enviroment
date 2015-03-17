@@ -1,0 +1,238 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-family: verdana;
+    font-size: 14px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.homeAPI {
+    font-size: 24px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+a:hover {
+    color: #555;
+}
+
+.headerMenu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.headerMenu li {
+    border-right: 1px solid black;
+    display: inline;
+    list-style: none outside none;
+    margin-left: 8px;
+}
+
+.headerMenu a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+.formCadastro, .formUpdate {
+    margin: 0 auto;
+    width: 445px;
+}
+
+.footerCenter {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.footerBoxCenter {
+    margin: 0 auto;
+    width: 100px;
+}
+
+.footerCenter {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
+.formBoxMensagem {
+    height: 150px;
+}
+
+.formBox {
+    height: 70px;
+}
+
+textarea[name="txtMensagem"] {
+    height: 100px;
+    width: 480px;
+}
+
+.margenInput {
+    margin-right: 20px;
+}
+
+.float {
+    float: left;
+}
+
+.botaoEnviar {
+    text-align: center;
+}
+
+.errorMensage {
+    margin-top: 50px;
+}
+
+.errorMensage h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.home h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.edit {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.list table {
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.list td {
+    padding: 0 8px;
+}
+
+.list td a {
+    color: #434343;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.editCenter {
+    height: 26px;
+    margin: 0 auto;
+    width: 1000px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.search, .pagination {
+    display: inline;
+    left: 0;
+}
+
+.editCenter form {
+    display: inline;
+}
+
+.message {
+    font-weight: bold;
+    height: 27px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: auto;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    z-index: 999999;
+    border: 1px solid;
+}
+
+.boxMessage {
+    height: 60px;
+}
+
+.messageSucessBackground{
+    background-image: url("../img/success.png");
+}
+.messageFailedBackground{
+    background-image: url("../img/failed.png");
+}
+.erro{
+    color:red;
+}
+
+.list h3 {
+    text-align: center;
+}
+.listHead{
+    text-align: center;
+}
+
+.labelEnviar {
+    width: 100%;
+}
+
+label p {
+    font-weight: bold;
+}
+
+.formBoxMensagem textarea {
+    height: 100px;
+    width: 425px;
+}
+
+.widthBox{
+    width: 445px;   
+}
+
+.date{
+    text-align: center;
+}
+
+.formCadastro label {
+    font-weight: bold;
+}
+
+
+.search {
+    display: block;
+    text-align: right;
+    width: 100%;
+}
+
+.search label {
+    font-weight: bold;
+    margin-right: 215px;
+}
+
+.apiPagination {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.apiPagination a {
+    color: #444;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.botaoEnviar.widthBox input[type="submit"] {
+    border: medium none;
+    border-radius: 7px;
+    height: 32px;
+    width: 120px;
+}

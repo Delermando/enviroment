@@ -1,0 +1,104 @@
+<div class="boxMessage">
+    <div class="message messageFailedBackground" ng-if="formUpdateCard.toEmail.$error.email" >Email Invalido!</div>
+    <div class="message messageFailedBackground" ng-if="formUpdateCard.fromEmail.$error.email" >Email Invalido!</div>
+    <div class="message messageFailedBackground" ng-if="formUpdateCard.fromName.$error.minlength" >O nome deve ter no minimo 3 caracteres!</div>
+    <div class="message messageFailedBackground" ng-if="formUpdateCard.toName.$error.minlength" >O nome deve ter no minimo 3 caracteres!</div>
+    <div class="message messageFailedBackground" ng-if="formUpdateCard.message.$error.minlength" >O nome deve ter no minimo 10 caracteres!</div>
+    <div class="message messageSucessBackground" ng-if="apiResponse == 'success'">Atualizacao do cartao realizada com sucesso!</div>
+    <div class="message messageFailedBackground" ng-if="apiResponse == 'failed'" >Por favor tente novamente! Ocorreu um erro na atualizacao do cartao.</div>
+</div>
+<div class="formUpdate">
+    <form name="formUpdateCard"  ng-submit="submitFormUpdate(formUpdateCard.$valid)" novalidate> 
+        <div class="formBoxMensagem widthBox"> 
+            <label for="txtMensagem">Mensagem</label>
+            <textarea name="message" ng-model="apiData.message"  ng-minlength="10"  required></textarea>
+        </div>
+        <div class="formBox widthBox">
+            <div class="float margenInput">
+                <label for="txtNomeRemetente">Nome do remetente</label><br />
+                <input type="text" name="fromName" ng-model="apiData.nameFromEmail" ng-minlength="3" placeholder="Example..." required>
+            </div>
+            <div class="float">
+                <label for="txtEmailRemetente">Email do remetente</label><br />
+                <input  name="fromEmail" ng-model="apiData.emailFromEmail" type="email" class="form-control" placeholder="example@example.com" required>
+            </div>
+        </div>
+        <div class="formBox widthBox">
+            <div class="float margenInput">
+                <label for="nomeDestinatario">Nome do destinatário</label><br />
+                <input type="text"  name="toName" ng-model="apiData.nameToEmail" ng-minlength="3" placeholder="Example..." required>
+
+            </div>         
+            <div class="float">
+                <label for="emailDestinatario">Email do destinatário</label><br />
+                <input  name="toEmail" ng-model="apiData.emailToEmail" type="email" class="form-control" placeholder="example@example.com" required>
+            </div>
+        </div>
+        <div class="formBox date widthBox">
+            <!--{{card.}}-->
+            <label for="selectDay">Enviar no dia:</label><br />
+            <div class="">
+                <select name="selectDay" required ng-model="apiData.day">
+                    <option value="">Dia</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="selectMonth" ng-model="apiData.month" required>
+                    <option value="">Mês</option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+                <select name="selectYear" ng-model="apiData.year" required>
+                    <option value="">Ano</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                </select>
+            </div>
+        </div>
+        <div class="botaoEnviar widthBox">
+            <input type="submit" value="Enviar" ng-disabled="formUpdateCard.$invalid" class="btn btn-primary" >
+        </div>
+    </form>
+</div>

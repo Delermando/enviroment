@@ -1,0 +1,12 @@
+{
+    "apiVersion": null,
+    "swaggerVersion": "1.2",
+    "apis": [
+        {
+            "path": "/v1-cards.{format}"
+        },
+        {
+            "path": "/home.{format}"
+        }
+    ]
+}

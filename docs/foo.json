@@ -1,0 +1,18 @@
+{
+    "basePath": "http://enviroment-deler.rhcloud.com",
+    "swaggerVersion": "1.2",
+    "apiVersion": "0.1",
+    "resourcePath": "/foo",
+    "apis": [
+        {
+            "path": "/foo",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "foo",
+                    "type": "FooModel"
+                }
+            ]
+        }
+    ]
+}
