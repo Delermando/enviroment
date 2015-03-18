@@ -10,7 +10,8 @@ angular.module('api.update', ['ngRoute'])
     }])
 
 .controller('UpdateCard', function ($scope, $http, $routeParams, cacheManager) {
-    $http.get('http://enviroment-deler.rhcloud.com/v1/cards/list' + $routeParams.idCard).success(function (apiReturn) {
+    $http.get('http://enviroment-deler.rhcloud.com/v1/cards/list/' + $routeParams.idCard).success(function (apiReturn) {
+
           if(apiReturn.data !== null){
             var arrayDate = (apiReturn.data[0].dateToSend).split('-');
             $scope.apiData = apiReturn.data[0];
