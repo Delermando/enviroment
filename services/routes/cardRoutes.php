@@ -21,7 +21,7 @@ $app->get('/', 'card.route:home');
 
 $app->get('/v1/cards/list', 'card.route:cardList');
 /**
- * @SWG\Resource(basePath="http://local.api.com", resourcePath="/v1/cards")
+ * @SWG\Resource(basePath="http://enviroment-deler.rhcloud.com", resourcePath="/v1/cards")
  * @SWG\Api(
  *  path="/v1/cards/list", 
  *  @SWG\Operations(

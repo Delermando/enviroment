@@ -1,5 +1,5 @@
 {
-    "basePath": "http://local.api.com",
+    "basePath": "http://enviroment-deler.rhcloud.com",
     "swaggerVersion": "1.2",
     "resourcePath": "/v1/cards",
     "apis": [
