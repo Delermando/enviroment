@@ -43,7 +43,7 @@ angular.module('api.list', ['ngRoute'])
         
         var cache = cacheManager.get('list');
         if (!cache) {
-            $http.get('http://enviroment-deler.rhcloud.com/projectSchedule/api/list').success(function (apiReturn) {
+            $http.get('http://enviroment-deler.rhcloud.com/v1/cards/list').success(function (apiReturn) {
                 $scope.apiData = pagination(apiReturn.data, 8, $routeParams.pageNumb);
                 cacheManager.put('list', apiReturn.data);
             });
@@ -82,7 +82,7 @@ angular.module('api.list', ['ngRoute'])
         }
 
         var deleteItenOnAPI = function (jsonPostVar) {
-            $http.post('http://enviroment-deler.rhcloud.com/projectSchedule/api/delete', jsonPostVar).success(function (apiReturn) {
+            $http.post('http://enviroment-deler.rhcloud.com/v1/cards/delete', jsonPostVar).success(function (apiReturn) {
                 if (apiReturn.response == 'success') {
                     deleteItendFromScope($scope.indexOfElements);
                     $scope.apiResponse = apiReturn.response;
