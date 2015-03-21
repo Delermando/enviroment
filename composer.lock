@@ -4,8 +4,47 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b5599352dc9a4cb737ba5a1e46209f99",
+    "hash": "a3730cf82c41947344029ee50c2a2dab",
     "packages": [
+        {
+            "name": "datadog/php-datadogstatsd",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataDog/php-datadogstatsd.git",
+                "reference": "c9fcd2a96a1ab681da48783427d698465613abd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataDog/php-datadogstatsd/zipball/c9fcd2a96a1ab681da48783427d698465613abd2",
+                "reference": "c9fcd2a96a1ab681da48783427d698465613abd2",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Corley",
+                    "email": "anthroprose@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Datadog",
+                    "email": "dev@datadoghq.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is an extremely simple PHP datadogstatsd client",
+            "homepage": "https://www.datadoghq.com/",
+            "keywords": [
+                "DataDog",
+                "php"
+            ],
+            "time": "2015-02-25 18:00:45"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.3",
