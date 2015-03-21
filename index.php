@@ -10,7 +10,7 @@ DataDogStatsD::increment('your.data.point', .5);
 DataDogStatsD::increment('your.data.point', 1, array('tagname' => 'value'));
 
 $start_time = microtime(true);
-run_function();
+//run_function();
 DataDogStatsD::timing('your.data.point', microtime(true) - $start_time);
 
 DataDogStatsD::timing('your.data.point', microtime(true) - $start_time, 1, array('tagname' => 'value'));
