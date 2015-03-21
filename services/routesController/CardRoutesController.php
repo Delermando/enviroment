@@ -13,7 +13,7 @@ class CardRoutesController{
     }
 
     public function home() {
-        return 'API Agenda';
+        return 'API Agenda V.2';       
     }
     public function cardList() {
       return $this->cardController->select();
