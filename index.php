@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set("log_errors", 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIC__ . '/vendor/datadog/php-datadogstatsd/libraries/datadogstatsd.php';
+require_once __DIR__ . '/vendor/datadog/php-datadogstatsd/libraries/datadogstatsd.php';
 DataDogStatsD::increment('your.data.point');
 DataDogStatsD::increment('your.data.point', .5);
 DataDogStatsD::increment('your.data.point', 1, array('tagname' => 'value'));
