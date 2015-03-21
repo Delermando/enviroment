@@ -15,6 +15,11 @@ class CardRoutesController{
     public function home() {
         return 'API Agenda V.2';       
     }
+   
+    public function helloName($name){
+	return 'Hey '.$name.'!!';
+    }
+	
     public function cardList() {
       return $this->cardController->select();
     }
