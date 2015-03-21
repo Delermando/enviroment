@@ -4,10 +4,10 @@ para fazer deploy de várias aplicações nos servidores da **OpenShift**.
 
 Cada **"Tag"** deste repositório é um projeto.
 
-## Lista de Tags 
+### Lista de Tags 
   - <a href="#03.2015-scheduleSystem-V1.0.0">03.2015-scheduleSystem-V1.0.0</a>
-
 ----
+### Descrições das Tags
 #### <a name="03.2015-scheduleSystem-V1.0.0">03.2015-scheduleSystem-V1.0.0</a>
   - **Descrição**:Projeto de inicio de estágio Personare, a idéia proposta foi, contruir uma API, RESTfull e um Client.
   - **Tecnologias:** Silex, Angular, Swagger, PHPUnit 
