@@ -11,22 +11,6 @@ DataDogStatsD::increment('your.data.point', 1, array('tagname' => 'value'));
 
 $start_time = microtime(true);
 //run_function();
-DataDogStatsD::timing('your.data.point', microtime(true) - $start_time);
-
-DataDogStatsD::timing('your.data.point', microtime(true) - $start_time, 1, array('tagname' => 'value'));
-
-$apiKey = 'myApiKey';
-$appKey = 'myAppKey';
-
-DataDogStatsD::configure($apiKey, $appKey);
-DataDogStatsD::event('A thing broke!', array(
-    'alert_type'      => 'error',
-    'aggregation_key' => 'test_aggr'
-));
-DataDogStatsD::event('Now it is fixed.', array(
-    'alert_type'      => 'success',
-    'aggregation_key' => 'test_aggr'
-));
 
 
 
