@@ -13,9 +13,6 @@ DataDogStatsD::increment('your.data.point', 1, array('tagname' => 'value'));
 $start_time = microtime(true);
 //run_function();
 
-
-
-
 use Swagger\Annotations as SWG;
 
 $app = new Silex\Application();
