@@ -18,7 +18,7 @@ $app->get('/', 'card.route:home');
  *)
  */
 
-$app->get('/{name}','card.route:helloName');
+$app->get('/name/{name}','card.route:helloName');
 
 $app->get('/v1/cards/list', 'card.route:cardList');
 /**
