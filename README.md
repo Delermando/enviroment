@@ -18,7 +18,7 @@ Cada **"Branch"** deste repositório é um projeto.
    - http://enviroment-deler.rhcloud.com/client
    - http://enviroment-deler.rhcloud.com/v1/cards/list
    - http://pt.slideshare.net/delersantos/apresentacao-projetoapi
-~                                                                 
+                                                                 
 #### <a name="03.2015-silexExamplesToArticle-V1.0.0">03.2015-silexExamplesToArticle-V1.0.0</a>
 - **Descrição**: Projeto para exemplificar a criação de um sistemas com o Silex, e suas features.
   - **Tecnologias:** Silex
