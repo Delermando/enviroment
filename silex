@@ -1,0 +1,67 @@
+https://github.com/fabpot
+https://github.com/silexphp/Silex/wiki/Third-Party-ServiceProviders
+http://sensiolabs.com/en/produits/products.html
+http://silex.sensiolabs.org/doc/providers.html
+https://github.com/mheap/Silex-Extensions
+
+
+
+O Silex é um microframework criado na Session Labs por Fabien Potencier, o mesmo criado de outros projetos Open Sources como, Pimple, Twig e Symfony um dos mais populares framework em PHP, e no qual o Silex foi inpirado além do Sinatra Framework Ruby.
+
+
+Licença MIT, OpenSource
+
+
+No Symfony se retira coisas,
+no Silex se adiciona.
+DIC
+
+
+A proposta inicial no Silex, é a de resolver pequenos problemas, de forma rápida e simples,os quais seriam um extremo exagero ao se usar algum framework Fullstack, o qual adicionaria tamando e complexidade descessarias a algo que se propõe a ser simplex.
+
+Dessa forma o Silex pode ser uma boa porta de entrada ao mundo dos frameworks e conceitos como Providers, Controllers, Routing etc ou  mesmo uma boa escolha para o caso de tarefas simples
+
+Uma das principais features do Silex é o seu sistema de Roteamento simples e poderoso. O qual muitas vezes erroneamente rotula o framework como sendo destinado a construção de API's. 
+
+
+Um framework fullstack comumente vem com uma estrutura de diretórios, convenções, arquivos de configurações etc
+O Silex pode ser escrito em um único arquivo
+
+O Silex não é um framework MVC, visto que não proporciona uma camada de Models o "M" do MVC, para mepeamento de tabelas usando do Active Records
+
+
+Umas das primeiras impressões que se tem sobre o Silex, é sobre sua simplicidade de instalação e inicio de uso, leve com sua instalação default não ocupando muito mais que 3 MB, e extensivel com grande gama de features que podem ser adicionadas.
+
+O único requerimento para instação do Silex é que esteja instalado no minímo a versão 5.3.3 do PHP
+
+
+O Silex se itiliza do Pimple (micro container de serviços) para injeção de dependencia oque proporciona a ele um sistema de Providers o qual pode ser entendido como um extensor de funcionalidades o qual facilia o uso de bibliotecas de terceiros tornando o framework extremamente flexivel além da possibilidade de se criar seus próprios Providers. Por padrão os seguintes Providers ja vem instalados:
+
+URL Gerator
+Session
+Validator
+Form
+Security
+Translation
+HTTP Cache
+Twig
+Monolog
+Doctrine
+SwiftMailer
+
+
+
+
+---> O Pimple é um projeto para injeção de dependencia
+
+O Silex também pode ser escalado para aplicações maiores, movendo as partes para diferentes arquivos e pastas, e adicionando suporte (Providers), para Banco de dados, Cache, Autenticação, Documentação etc
+
+---> Controle as sevices esta funcionalidade permiti registrar um controlador como sendo um serviçõ e assim ser distribuido pela aplicação ao invés de estar preso a escopo de arquivo
+
+Framwork agnostico
+HttpKernel o coração do Symfony o qual abstrai as requisições e respostas Http o qual torna muito mais facil testar 
+
+A criação de APIs RESTfull tem se tornado um movimento forte no mercado por sua caracteristica de postabilidade, onde o core da aplição se construido e disponibilizado por uma API, onde os clients simplesmente consomem as rotas não ficando junto da regra de negócio torna o seu negócio portavel com a possibilidaade de se desenvolver clients para seu negocio tanto para web, descktop, movel etc
+
+
+O Composer é uma ideia de outras linguagens de programação que contam com seu sistema de gerenciamento de dependencias, inspirado no gem 
