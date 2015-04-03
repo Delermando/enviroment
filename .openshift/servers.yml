@@ -1,0 +1,7 @@
+---
+- server:
+    hostname: openshift.redhat.com
+    nickname: online
+    login: delsantos@hotmail.com.br
+    use_authorization_tokens: true
+    insecure: false
