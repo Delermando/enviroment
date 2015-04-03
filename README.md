@@ -4,12 +4,15 @@ para fazer deploy de várias aplicações nos servidores da **OpenShift**.
 
 Cada **"Branch"** deste repositório é um projeto.
 
-### Lista de Tags 
-  - <a href="#03.2015-scheduleSystem-V1.0.0">03.2015-scheduleSystem-V1.0.0</a>
-  - <a href="#03.2015-silexExamplesToArticle-V1.0.0">03.2015-silexExamplesToArticle-V1.0.0</a>
+### Lista de Branchs 
+  - <a href="#ScheduleSystem">ScheduleSystem</a>
+  - <a href="#SilexWithTwig">SilexGetStart</a>
+  - <a href="#SilexWithTwig">SilexWithTwig</a>
+  - <a href="#LaravelGetStart">LaravelGetStart</a>
+  - <a href="#MeteorGetStart">MeteorGetStart</a>
 
 ### Descrições dos Branchs
-#### <a name="03.2015-scheduleSystem-V1.0.0">03.2015-scheduleSystem-V1.0.0</a>
+#### <a name="ScheduleSystem">ScheduleSystem</a>
   - **Descrição**:Projeto de inicio de estágio Personare, a idéia proposta foi, contruir uma API, RESTfull e um Client.
   - **Tecnologias:** Silex, Angular, Swagger, PHPUnit
   - **Links:**
@@ -19,9 +22,27 @@ Cada **"Branch"** deste repositório é um projeto.
    - http://enviroment-deler.rhcloud.com/v1/cards/list
    - http://pt.slideshare.net/delersantos/apresentacao-projetoapi
                                                                  
-#### <a name="03.2015-silexExamplesToArticle-V1.0.0">03.2015-silexExamplesToArticle-V1.0.0</a>
-  - **Descrição**: Projeto para exemplificar a criação de um sistemas com o Silex, e suas features.
+#### <a name="SilexGetStart">SilexGetStart</a>
+  - **Descrição**: Projeto para exemplificar como iniciar com o Silex
   - **Tecnologias:** Silex
   - **Links:**
    - http://enviroment-deler.rhcloud.com
+   - http://enviroment-deler.rhcloud.com/hello/<nome>
 
+#### <a name="SilexWithTwig">SilexWithTwig</a>
+  - **Descrição**: Projeto para exemplificar o uso do Silex com o Twigg (Sistema de Templates)'.
+  - **Tecnologias:** Silex, Twigg
+  - **Links:**
+   - http://enviroment-deler.rhcloud.com
+
+#### <a name="LaravelGetStart">LaravelGetStart</a>
+  - **Descrição**: Projeto para exemplificar a instalação e uso do Laravel
+  - **Tecnologias:** Laravel
+  - **Links:**
+   - http://enviroment-deler.rhcloud.com
+
+#### <a name="MeteorGetStart">MeteorGetStart</a>
+  - **Descrição**: Projeto para exemplificar o criação de um app com o Meteor.js.
+  - **Tecnologias:** Meteor.js
+  - **Links:**
+   - http://enviroment-deler.rhcloud.com
