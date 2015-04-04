@@ -1,0 +1,10 @@
+<?php
+class Breed extends Eloquent
+{
+	public $timestamp = false;
+
+	public function Cats()
+	{
+		return $this->hasMany('Cat');
+	}	
+}
