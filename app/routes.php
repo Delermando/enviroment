@@ -11,7 +11,26 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function(){
+	return "All cats";
+});
+
+Route::get('cats', function(){
+	return "Redirect come to here";
+});
+
+Route::get('cats/{id}',function($id){
+	return "Cat #$id";
+});
+
+Route::get('cats2/{id}',function($id){
+	return "Cat #$id";
+})->where('id','[0-9]+');
+
+Route::get('catsRedirect',function(){
+	return Redirect::to('cats');
+});
+
+Route::get('catsTestView', function(){
+	return View::make('about')->with('number_of_cats',9000);
 });

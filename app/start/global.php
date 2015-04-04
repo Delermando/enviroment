@@ -78,4 +78,8 @@ App::down(function()
 |
 */
 
+App::missing(function($exception){
+	return Response::make("Page not found", 404);
+});
+
 require app_path().'/filters.php';
