@@ -12,10 +12,14 @@ http.createServer( function( request, response ) {
     var lookup = path.basename( decodeURI( request.url )) || 'index.html';    
 
     var f = 'content/' + lookup;
-    fs.exists( f, function( exists ){
-        if( exists ){
-            fs.readFile( f, function( err, data ){
-                if( err ){
+    fs.exists( f, function( exists )
+    {
+        if( exists )
+        {
+            fs.readFile( f, function( err, data )
+            {
+                if( err )
+                {
                     response.writeHead( 500 );
                     response.end( 'Server Error!' ); 
                     return;
@@ -26,8 +30,28 @@ http.createServer( function( request, response ) {
             });
             return; 
         }
+        if( request.url === '/favicon.ico' )
+        {
+            console.log('Not found: ' + f);
+            response.end();
+            return;
+
+        }
         response.writeHead( 404 );//no such file found
         response.end();
     });
 
 }).listen( 8080 );
+
+
+
+
+
+
+
+
+
+
+
+
+
