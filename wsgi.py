@@ -1,10 +1,23 @@
-<!doctype html>
+#!/usr/bin/env python
+import os
+
+def application(environ, start_response):
+
+    ctype = 'text/plain'
+    if environ['PATH_INFO'] == '/health':
+        response_body = "1"
+    elif environ['PATH_INFO'] == '/env':
+        response_body = ['%s: %s' % (key, value)
+                    for key, value in sorted(environ.items())]
+        response_body = '\n'.join(response_body)
+    else:
+        ctype = 'text/html'
+        response_body = '''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Welcome to OpenShift</title>
-
 <style>
 
 /*!
@@ -141,6 +154,7 @@ hgroup {
 }
 footer {
     margin: 50px 0 25px;
+    font-size: 11px;
 }
 h1, h2, h3 {
   color: #000;
@@ -190,7 +204,7 @@ pre {
   padding: 13.333px 20px;
   margin: 0 0 20px;
   font-size: 13px;
-line-height: 1.4;
+  line-height: 1.4;
   background-color: #fff;
   border-left: 2px solid rgba(120,120,120,0.35);
   white-space: pre;
@@ -202,14 +216,12 @@ line-height: 1.4;
 }
 
 </style>
-
 </head>
 <body>
 <section class='container'>
           <hgroup>
-            <h1>Welcome to your Node.js application on OpenShift</h1>
+            <h1>Welcome to your Python application on OpenShift</h1>
           </hgroup>
-
 
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
@@ -229,12 +241,11 @@ line-height: 1.4;
 
 $ git commit -a -m 'Some commit message'
 $ git push</pre>
-
-
                   <ul>
                     <li><a href="https://developers.openshift.com/en/managing-modifying-applications.html">Learn more about deploying and building your application</a></li>
                     <li>See the README file in your local application Git repository for more information on the options for deploying applications.</li>
                   </ul>
+
             </section>
 
           </section>
@@ -249,15 +260,16 @@ $ git push</pre>
                 <p>Installing the <a href="https://developers.openshift.com/en/managing-client-tools.html">OpenShift RHC client tools</a> allows you complete control of your cloud environment. Read more on how to manage your application from the command line in our <a href="https://www.openshift.com/user-guide">User Guide</a>.
                 </p>
 
-<h2>Development Resources</h2>
+                <h2>Development Resources</h2>
                   <ul>
-                    <li><a href="https://developers.openshift.com/en/node-js-overview.html">Getting Started with Node.js on OpenShift</a></li>
+                    <li><a href="https://developers.openshift.com/en/python-overview.html">Getting Started with Python on OpenShift</a></li>
                     <li><a href="https://developers.openshift.com">Developer Center</a></li>
                     <li><a href="https://www.openshift.com/user-guide">User Guide</a></li>
                     <li><a href="https://help.openshift.com">Help Center</a></li>
                     <li><a href="http://stackoverflow.com/questions/tagged/openshift">Stack Overflow questions for OpenShift</a></li>
                     <li><a href="http://git-scm.com/documentation">Git documentation</a></li>
                   </ul>
+
 
           </section>
         </div>
@@ -267,4 +279,19 @@ $ git push</pre>
         </footer>
 </section>
 </body>
-</html>
+</html>'''
+
+    status = '200 OK'
+    response_headers = [('Content-Type', ctype), ('Content-Length', str(len(response_body)))]
+    #
+    start_response(status, response_headers)
+    return [response_body.encode('utf-8') ]
+
+#
+# Below for testing only
+#
+if __name__ == '__main__':
+    from wsgiref.simple_server import make_server
+    httpd = make_server('localhost', 8051, application)
+    # Wait for a single request, serve it and quit.
+    httpd.handle_request()
