@@ -1,5 +1,5 @@
 {
-    "basePath": "http://enviroment-deler.rhcloud.com",
+    "basePath": "http://phpengine-deler.rhcloud.com",
     "swaggerVersion": "1.2",
     "resourcePath": "home",
     "apis": [
