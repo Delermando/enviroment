@@ -10,6 +10,7 @@ Cada **"Branch"** deste repositório é um projeto.
   - <a href="#SilexWithTwig">SilexWithTwig</a>
   - <a href="#LaravelGetStart">LaravelGetStart</a>
   - <a href="#MeteorGetStart">MeteorGetStart</a>
+  - <a href="#NodeGetStart">NodeGetStart</a>
 
 ### Descrições dos Branchs
 #### <a name="ScheduleSystem">ScheduleSystem</a>
@@ -46,3 +47,7 @@ Cada **"Branch"** deste repositório é um projeto.
   - **Tecnologias:** Meteor.js
   - **Links:**
    - http://enviroment-deler.rhcloud.com
+
+#### <a name="NodeGetStart">NodeGetStart</a>
+  - **Descrição**: Projeto para se inciar com o Node.
+  - **Tecnologias:** Node.js
