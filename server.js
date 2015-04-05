@@ -1,25 +1,23 @@
 var http = require('http');
+var url = require('url');
 
 var pages = [
-    {route: '/', output: 'Woohoo'},
-    {route: '/about/this', output: 'Multilevel routing with Node'},
-    {route: '/about/node', output: 'Event I/O for V8 JavaScript'},
-    {route: 'anotherPage', output: function () {
-            return 'Here\'s ' + this.route;
-        }},
+    {id: '1', route: '', output: 'WOhooo'},
+    {id: '2', route: '/about', output: 'A simple route with node example'},
+    {id: '3', route: 'anotherPage', output: function () {return 'Here\'s ' + this.route;}},
 ];
 
 http.createServer(function (request, response) {
-    var lookup = decodeURI(request.url);
+    var id = url.parse(decodeURI(request.url), true).query.id;
 
-    pages.forEach(function (page) {
-        if (page.route === lookup) {
-            response.writeHead(200, {'Content-Type': 'text/html'});
-            response.end(typeof page.output === 'function' ? page.output() : page.output)
-        }
-
-    });
-
+    if( id ){
+        pages.forEach(function (page) {
+            if (page.id === id) {
+                response.writeHead(200, {'Content-Type': 'text/html'});
+                response.end(typeof page.output === 'function' ? page.output() : page.output);
+            }
+        });
+    }
     if (!response.finished) {
         response.writeHead(404);
         response.end('Page Not Found!');
