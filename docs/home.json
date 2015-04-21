@@ -1,0 +1,16 @@
+{
+    "basePath": "http://phpengine-deler.rhcloud.com",
+    "swaggerVersion": "1.2",
+    "resourcePath": "home",
+    "apis": [
+        {
+            "path": "/",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "home"
+                }
+            ]
+        }
+    ]
+}
