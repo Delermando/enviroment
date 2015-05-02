@@ -1,7 +1,11 @@
 var express = require('express')
     mongoose = require("mongoose");
 
-var db = mongoose.connect("mongodb://localhost/bookAPI");
+var ip = process.env.MONGO_PORT_27017_TCP_ADDR;
+var port = process.env.MONGO_PORT_27017_TCP_PORT;
+var link = "mongodb://"+ip+":"+port+"/bookAPI";
+
+var db = mongoose.connect(link);
 
 var Book = require("./models/bookModel");
 
