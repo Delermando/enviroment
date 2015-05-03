@@ -1,22 +1,27 @@
 var express = require('express')
-    mongoose = require("mongoose");
+    mongoose = require("mongoose")
+    bodyParser = require("body-parser");
 
 var ip = process.env.MONGO_PORT_27017_TCP_ADDR;
 var port = process.env.MONGO_PORT_27017_TCP_PORT;
 var link = "mongodb://"+ip+":"+port+"/bookAPI";
-
 var db = mongoose.connect(link);
-
 var Book = require("./models/bookModel");
-
 var app = express();
-
 var port = process.env.PORT || 8080;
-
 var bookRouter = express.Router();
 
 
-bookRouter.route('/books')
+app.use( bodyParser.urlencoded( { extended: true } ) );
+app.use( bodyParser.json() );
+
+bookRouter.route( '/books' )
+    .post( function( req, res ){
+        var book = new Book( req.body );
+
+        book.save();
+        res.status( 201).send(book);
+    })
     .get( function( req, res ){
         var query = {};
         if( req.query.genre ){
@@ -34,12 +39,11 @@ bookRouter.route('/books')
 
 bookRouter.route("/books/:bookId")
     .get( function( req, res ){
-        res.json(req.params.bookId);
-            Book.findById( req.params.bookId, function( err, books){
+            Book.findById( req.params.bookId, function( err, book){
                 if( err )
                     res.status(500).send( err );
                 else
-                    res.json(book);
+                    res.json( book );
             });
         });
 
